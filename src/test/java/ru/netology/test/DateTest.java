@@ -67,7 +67,7 @@ class DateTest {
         $("[data-test-id='agreement']").click();
         $("button.button").click();
         $("[data-test-id='date'] .input__sub").shouldBe(Condition.visible)
-                .shouldHave(Condition.text("Неверно введена дата"));
+                .shouldHave(Condition.text("Выберите дату встречи с представителем банка"));
     }
     @Test
     void NegativeZeroName() {
