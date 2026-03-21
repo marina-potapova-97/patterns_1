@@ -96,6 +96,7 @@ class DateTest {
         $("[data-test-id='date'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME),Keys.DELETE)
                 .setValue(firstMeetingDate);
         $("[data-test-id='name'] input").setValue(validUser.getName());
+        $("[data-test-id='phone'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME),Keys.DELETE);
         $("[data-test-id='agreement']").click();
         $("button.button").click();
         $("[data-test-id='phone'] .input__sub").shouldBe(Condition.visible)
