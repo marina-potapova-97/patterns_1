@@ -44,7 +44,7 @@ class DateTest {
     }
 
     @Test
-    void NegativeZeroCity() {
+    void negativeZeroCity() {
         var validUser = GeneratorDate.Registration.generateUser("ru"); // Используем GeneratorDate
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = GeneratorDate.generateDate(daysToAddForFirstMeeting, "dd.MM.yyyy");
@@ -58,7 +58,7 @@ class DateTest {
                 .shouldHave(Condition.text("Поле обязательно для заполнения"));
     }
     @Test
-    void NegativeZeroDate() {
+    void negativeZeroDate() {
         var validUser = GeneratorDate.Registration.generateUser("ru"); // Используем GeneratorDate
         $("[data-test-id='city'] input").setValue(validUser.getCity());
         $("[data-test-id='date'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME),Keys.DELETE);
@@ -70,7 +70,7 @@ class DateTest {
                 .shouldHave(Condition.text("Неверно введена дата"));
     }
     @Test
-    void NegativeZeroName() {
+    void negativeZeroName() {
         var validUser = GeneratorDate.Registration.generateUser("ru"); // Используем GeneratorDate
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = GeneratorDate.generateDate(daysToAddForFirstMeeting, "dd.MM.yyyy");
@@ -86,7 +86,7 @@ class DateTest {
                 .shouldHave(Condition.text("Поле обязательно для заполнения"));
     }
     @Test
-    void NegativeZeroPhone() {
+    void negativeZeroPhone() {
         var validUser = GeneratorDate.Registration.generateUser("ru"); // Используем GeneratorDate
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = GeneratorDate.generateDate(daysToAddForFirstMeeting, "dd.MM.yyyy");
@@ -103,7 +103,7 @@ class DateTest {
                 .shouldHave(Condition.text("Поле обязательно для заполнения"));
     }
     @Test
-    void NegativeCheckBox() {
+    void negativeCheckBox() {
         var validUser = GeneratorDate.Registration.generateUser("ru"); // Используем GeneratorDate
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = GeneratorDate.generateDate(daysToAddForFirstMeeting, "dd.MM.yyyy");
@@ -118,7 +118,7 @@ class DateTest {
         $("[data-test-id='success-notification']").shouldNotBe(Condition.visible);
     }
     @Test
-    void NegativeCity() {
+    void negativeCity() {
         var noValidUser = GeneratorDate.Registration.generateUser("ENG");
         var validUser = GeneratorDate.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 4;
@@ -134,7 +134,7 @@ class DateTest {
                 .shouldHave(Condition.text("Доставка в выбранный город недоступна"));
     }
     @Test
-    void NegativeDate() {
+    void negativeDate() {
         var validUser = GeneratorDate.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 1;
         var firstMeetingDate = GeneratorDate.generateDate(daysToAddForFirstMeeting, "dd.MM.yyyy");
@@ -149,7 +149,7 @@ class DateTest {
                 .shouldHave(Condition.text("Заказ на выбранную дату невозможен"));
     }
     @Test
-    void NegativeName() {
+    void negativeName() {
         var noValidUser = GeneratorDate.Registration.generateUser("ENG");
         var validUser = GeneratorDate.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 4;
@@ -165,7 +165,7 @@ class DateTest {
                 .shouldHave(Condition.text("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
          }
     @Test
-    void NegativePhone() {
+    void negativePhone() {
         var validUser = GeneratorDate.Registration.generateUser("ru");
         String invalidPhoneNumber = "123";
         var daysToAddForFirstMeeting = 4;
